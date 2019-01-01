@@ -1,188 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+	<meta charset="utf-8" />
+	<title></title>
 
-    <style type="text/css">
-
-        body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .numbers-list {
-            list-style: none;
-            padding: 0;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
-
-            .numbers-list li {
-                display: inline-block;
-                cursor: pointer;
-                width: 8.5%;
-                text-align: center;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                background-color: #CCC;
-                margin: 0.4% 0.2%;
-            }
-
-                .numbers-list li.selected {
-                    background-color: #F00;
-                }
-    </style>
-
+	<style type="text/css">
+		body {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: 1.3em;
+			font-weight: bold;
+			margin: 30px 0;
+			background-color: #EEF8FF;
+		}
+		.numbers-list {
+			list-style: none;
+			padding: 0;
+			max-width: 1200px;
+			margin: auto;
+			text-align: center;
+		}
+		.numbers-list li {
+			display: inline-block;
+			cursor: pointer;
+			width: 8.5%;
+			text-align: center;
+			background-color: #CCC;
+			border: solid 1px #666;
+			box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.3);
+			border-radius: 4px;
+			box-sizing: border-box;
+			padding-top: 1.5%;
+			padding-bottom: 1.5%;
+			margin: 0.4% 0.2%;
+		}
+		.numbers-list li.selected {
+			background-color: #F00;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 </head>
 <body>
-    <div class="numbers-grid">
-        <ul class="numbers-list">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-            <li>32</li>
-            <li>33</li>
-            <li>34</li>
-            <li>35</li>
-            <li>36</li>
-            <li>37</li>
-            <li>38</li>
-            <li>39</li>
-            <li>40</li>
-            <li>41</li>
-            <li>42</li>
-            <li>43</li>
-            <li>44</li>
-            <li>45</li>
-            <li>46</li>
-            <li>47</li>
-            <li>48</li>
-            <li>49</li>
-            <li>50</li>
-            <li>51</li>
-            <li>52</li>
-            <li>53</li>
-            <li>54</li>
-            <li>55</li>
-            <li>56</li>
-            <li>57</li>
-            <li>58</li>
-            <li>59</li>
-            <li>60</li>
-            <li>61</li>
-            <li>62</li>
-            <li>63</li>
-            <li>64</li>
-            <li>65</li>
-            <li>66</li>
-            <li>67</li>
-            <li>68</li>
-            <li>69</li>
-            <li>70</li>
-            <li>71</li>
-            <li>72</li>
-            <li>73</li>
-            <li>74</li>
-            <li>75</li>
-            <li>76</li>
-            <li>77</li>
-            <li>78</li>
-            <li>79</li>
-            <li>80</li>
-            <li>81</li>
-            <li>82</li>
-            <li>83</li>
-            <li>84</li>
-            <li>85</li>
-            <li>86</li>
-            <li>87</li>
-            <li>88</li>
-            <li>89</li>
-            <li>90</li>
-            <li>91</li>
-            <li>92</li>
-            <li>93</li>
-            <li>94</li>
-            <li>95</li>
-            <li>96</li>
-            <li>97</li>
-            <li>98</li>
-            <li>99</li>
-            <li>100</li>
-        </ul>
+	<div class="numbers-grid">
+		<ul class="numbers-list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+			<li>16</li>
+			<li>17</li>
+			<li>18</li>
+			<li>19</li>
+			<li>20</li>
+			<li>21</li>
+			<li>22</li>
+			<li>23</li>
+			<li>24</li>
+			<li>25</li>
+			<li>26</li>
+			<li>27</li>
+			<li>28</li>
+			<li>29</li>
+			<li>30</li>
+			<li>31</li>
+			<li>32</li>
+			<li>33</li>
+			<li>34</li>
+			<li>35</li>
+			<li>36</li>
+			<li>37</li>
+			<li>38</li>
+			<li>39</li>
+			<li>40</li>
+			<li>41</li>
+			<li>42</li>
+			<li>43</li>
+			<li>44</li>
+			<li>45</li>
+			<li>46</li>
+			<li>47</li>
+			<li>48</li>
+			<li>49</li>
+			<li>50</li>
+			<li>51</li>
+			<li>52</li>
+			<li>53</li>
+			<li>54</li>
+			<li>55</li>
+			<li>56</li>
+			<li>57</li>
+			<li>58</li>
+			<li>59</li>
+			<li>60</li>
+			<li>61</li>
+			<li>62</li>
+			<li>63</li>
+			<li>64</li>
+			<li>65</li>
+			<li>66</li>
+			<li>67</li>
+			<li>68</li>
+			<li>69</li>
+			<li>70</li>
+			<li>71</li>
+			<li>72</li>
+			<li>73</li>
+			<li>74</li>
+			<li>75</li>
+			<li>76</li>
+			<li>77</li>
+			<li>78</li>
+			<li>79</li>
+			<li>80</li>
+			<li>81</li>
+			<li>82</li>
+			<li>83</li>
+			<li>84</li>
+			<li>85</li>
+			<li>86</li>
+			<li>87</li>
+			<li>88</li>
+			<li>89</li>
+			<li>90</li>
+			<li>91</li>
+			<li>92</li>
+			<li>93</li>
+			<li>94</li>
+			<li>95</li>
+			<li>96</li>
+			<li>97</li>
+			<li>98</li>
+			<li>99</li>
+			<li>100</li>
+		</ul>
 
-    </div>
+	</div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    $(function() {
-    $(".numbers-list li").click(function() {
-    setTimeout(function() {
-    $(this).removeClass("selected");
-    }, 1500);
-    speak($(this));
-    });
-    });
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(function () {
+			$(".numbers-list li").click(function () {
+				//if (!window.speechSynthesis.speaking)
+				//{
+					$(this).siblings(".selected").removeClass("selected");
+					$(this).addClass("selected");
+					speak($(this));
+				//}
+			});
+		});
 
-
-    function speak(selecteditem) {
-    $(selecteditem).addClass("selected");
-
-    var speechText = $(selecteditem).text();
-    var msg = new SpeechSynthesisUtterance();
-    var voices = window.speechSynthesis.getVoices();
-    //msg.voice = voices[10]; // Note: some voices don't support altering params
-    //msg.voiceURI = 'native';
-    msg.volume = 1; // 0 to 1
-    //msg.rate = 0.9; // 0.1 to 10
-    //msg.pitch = 0; //0 to 2
-    msg.text = speechText;
-    msg.lang = 'en-US';
-
-    msg.onend = function(e) {
-    $(selecteditem).removeClass("selected");
-    };
-
-    speechSynthesis.speak(msg);
-    var i = 0;
-    //speechSynthesis.getVoices().forEach(function(voice) {
-    //  console.log("[" + i + "]" + voice.name, voice.default ? voice.default :'');
-    //  i++
-    //});
-    }
-    </script>
+		function speak(selecteditem) {
+			var speechText = $(selecteditem).text();
+			var msg = new SpeechSynthesisUtterance();
+			msg.volume = 1; // 0 to 1
+			msg.text = speechText;
+			msg.lang = 'en-US';
+			speechSynthesis.speak(msg);
+		}
+	</script>
 
 
 </body>
