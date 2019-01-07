@@ -2,15 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title></title>
+	<title>Learn to count | FreshlyBakedPixels</title>
 
 	<style type="text/css">
 		body {
 			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 			font-size: 1.3em;
 			font-weight: bold;
-			margin: 30px 0;
-			background-color: #EEF8FF;
+			margin: 30px 10px;
+			background-color: #EBEFF0;
 		}
 		.numbers-list {
 			list-style: none;
@@ -18,25 +18,42 @@
 			max-width: 1200px;
 			margin: auto;
 			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
 		}
 		.numbers-list li {
-			display: inline-block;
+			/*display: inline-block;*/
+			flex: 0 0 auto;
 			cursor: pointer;
-			width: 8.5%;
-			text-align: center;
-			background-color: #CCC;
-			border: solid 1px #666;
-			box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.3);
-			border-radius: 4px;
+			width: 8.0%;
+			background-color: #3B9CD9;
+			border: solid 4px #156BD9;
+			color: #FFF;
+			border-radius: 25px;
 			box-sizing: border-box;
-			padding-top: 1.5%;
-			padding-bottom: 1.5%;
-			margin: 0.4% 0.2%;
+			padding-top: 2%;
+			padding-bottom: 2%;
+			margin: 0.7% 0.8%;
 		}
 		.numbers-list li.selected {
-			background-color: #F00;
+			background-color: #E94C2A;
+		}
+		@media only screen and (max-width: 768px)
+		{
+			body
+			{
+				font-size: 0.9em;
+			}
+			.numbers-list li {
+				width: 9%;
+				margin: 0.7% 0.2%;
+				border-radius: 10px;
+				border: none;
+			}
 		}
 	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div class="numbers-grid">
@@ -159,15 +176,30 @@
 		});
 
 		function speak(selecteditem) {
-			var speechText = $(selecteditem).text();
+			var selectedItemText = $(selecteditem).text();
+			var speechText = '';
+
+			//if single digit number
+			if (selectedItemText.length < 2)
+			{
+				speechText = selectedItemText;
+			}
+			//if two or three digit number then speak each digit first
+			else
+			{
+				for (var i = 0; i < selectedItemText.length; i++)
+				{
+					speechText = speechText + selectedItemText[i] + " ";
+				}
+				speechText = speechText + selectedItemText;
+			}
+
 			var msg = new SpeechSynthesisUtterance();
-			msg.volume = 1; // 0 to 1
+			msg.volume = 1;
 			msg.text = speechText;
 			msg.lang = 'en-US';
 			speechSynthesis.speak(msg);
 		}
 	</script>
-
-
 </body>
 </html>
